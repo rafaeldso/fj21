@@ -29,7 +29,7 @@ public class ContatoDAO {
     }
 
     public void adiciona(Contato contato) {
-        String sql = "insert into contatos "
+        String sql = "insert into contatos(nome,email,endereco,dataNascimento) "
                 + " values (?,?,?,?)";
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
